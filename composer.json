@@ -1,0 +1,22 @@
+{
+    "name": "bryglen/yii2-omnipay",
+    "description": "thephpleague/omnipay for Yii 2",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "extension", "phpleague", "bryglen", "omnipay"],
+    "license": "MIT",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Bryan Jayson Tan",
+            "email": "bryantan16@gmail.com"
+        }
+    ],
+    "require": {
+        "thephpleague/omnipay": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "bryglen\\omnipay\\": ""
+        }
+    }
+}
