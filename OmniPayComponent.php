@@ -26,15 +26,13 @@ class OmniPayComponent extends Component
     public function prepareGateway()
     {
         $this->_gateway = Omnipay::create($this->name);
-        foreach ($this->parameters as $key => $value) {
-            $this->_gateway->setParameter($key, $value);
-        }
         if ($this->testMode) {
-            $this->_gateway->setTestMode($this->testMode);
+            $this->parameters['testMode'] = $this->testMode;
         }
         if ($this->currency) {
-            $this->_gateway->setCurrency($this->currency);
+            $this->parameters['currency'] = $this->currency;
         }
+        $this->_gateway->initialize($this->parameters);
     }
 
     public function getGateway()
